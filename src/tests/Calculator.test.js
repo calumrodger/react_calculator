@@ -61,15 +61,15 @@ describe('Calculator', () => {
     const runningTotal = container.find("#running-total");
     const button2 = container.find("#number2");
     const button1 = container.find("#number1");
+    const button0 = container.find("#number0");
     const buttonDivide = container.find("#operator-divide");
-    const button7 = container.find("#number7");
     const buttonEquals = container.find("#operator-equals");
-    button2.simulate('click');
     button1.simulate('click');
+    button0.simulate('click');
     buttonDivide.simulate('click');
-    button7.simulate('click');
+    button2.simulate('click');
     buttonEquals.simulate('click');
-    expect(runningTotal.text()).toEqual('3');
+    expect(runningTotal.text()).toEqual('5');
   })
 
   it('should be able to concatenate multiple number button clicks', () => {
